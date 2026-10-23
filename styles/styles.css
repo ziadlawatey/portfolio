@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Artists Kindle";
+  src: url("../assests/fonts/ArtistsKindle-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Monument Extended";
+  src: url("../assests/fonts/monumentextended-regular.otf") format("opentype");
+}
+
+:root {
+  --base-color: rgb(255, 255, 255);
+  --secondary-color: rgb(185, 184, 184);
+  --tertiary-color: rgb(0, 0, 0);
+  --quaternary-color: #232738;
+  --primary-color: #3a435d;
+}
+
+:root[data-theme="dark"] {
+  --base-color: #000;
+  --secondary-color: #101425;
+  --tertiary-color: #fff;
+  --primary-color: #fff;
+}
+
 body {
   height: 100vh;
   margin: 50px 125px;
@@ -7,6 +34,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
+}
+
+.fa-sun {
+  color: #ffcc33;
+}
+
+.fa-moon {
+  color: #1e1b4b;
 }
 
 .logo {
@@ -20,19 +56,64 @@ header {
 .logo-icon {
   width: 50px;
   height: 50px;
-  margin-bottom: 5px;
-}
-
-@font-face {
-  font-family: "Artists Kindle";
-  src: url("../assests/fonts/ArtistsKindle-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  /* margin-bottom: 5px; */
 }
 
 .logo-name {
   font-family: "Artists Kindle", serif;
   font-size: 2rem;
-  margin-left: 5px;
+  margin: 5px 0 0 5px;
+}
+
+.theme-switcher i {
+  font-size: 1.1rem;
+}
+
+.theme-switcher,
+.theme-switcher button {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+header .right-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  background: var(--secondary-color);
+}
+
+.theme-switcher button {
+  border: none;
+  background: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  color: var(--tertiary-color);
+}
+
+.theme-switcher button[aria-pressed="true"] {
+  background: var(--primary-color);
+  color: var(--base-color);
+}
+
+.right-part {
+  background-color: rgb(185, 184, 184);
+  padding: 0.1rem 1.3rem;
+  border-radius: 2rem;
+}
+
+nav ul a {
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  /* text-transform: uppercase; */
+  font-weight: bold;
 }
