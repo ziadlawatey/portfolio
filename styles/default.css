@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+header,
+main,
+footer,
+body,
+header,
+img,
+source,
+button,
+picture,
+a {
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  user-select: none;
+}
