@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
   font-family: "Artists Kindle";
@@ -10,110 +10,113 @@
   src: url("../assests/fonts/monumentextended-regular.otf") format("opentype");
 }
 
-:root {
-  --base-color: rgb(255, 255, 255);
-  --secondary-color: rgb(185, 184, 184);
-  --tertiary-color: rgb(0, 0, 0);
-  --quaternary-color: #232738;
-  --primary-color: #3a435d;
-}
-
-:root[data-theme="dark"] {
-  --base-color: #000;
-  --secondary-color: #101425;
-  --tertiary-color: #fff;
-  --primary-color: #fff;
-}
-
 body {
-  height: 100vh;
-  margin: 50px 125px;
-}
-
-header {
+  background: linear-gradient(90deg, #0f0524 -5%, #2c1752 50%, #482a78 100%);
+  font-family: "Archivo", sans-serif;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-}
-
-.fa-sun {
-  color: #ffcc33;
-}
-
-.fa-moon {
-  color: #1e1b4b;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  background-color: rgb(185, 184, 184);
-  padding: 0.1rem 1.3rem;
-  border-radius: 2rem;
-}
-
-.logo-icon {
-  width: 50px;
-  height: 50px;
-  /* margin-bottom: 5px; */
-}
-
-.logo-name {
-  font-family: "Artists Kindle", serif;
-  font-size: 2rem;
-  margin: 5px 0 0 5px;
-}
-
-.theme-switcher i {
-  font-size: 1.1rem;
-}
-
-.theme-switcher,
-.theme-switcher button {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-header .right-part {
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.theme-switcher {
+.container {
+  min-height: 100vh;
+  width: 80%;
+}
+
+header {
+  /* border-bottom: 1px solid white; */
+  position: sticky;
+  z-index: 100;
   display: flex;
-  gap: 0.25rem;
-  padding: 0.25rem;
-  border-radius: 1rem;
-  background: var(--secondary-color);
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 6rem 0 6rem; */
+  height: 255px;
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
 }
 
-.theme-switcher button {
-  border: none;
-  background: none;
-  padding: 0.4rem 0.7rem;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  color: var(--tertiary-color);
+.logo {
+  width: 65px;
+  height: 65px;
 }
 
-.theme-switcher button[aria-pressed="true"] {
-  background: var(--primary-color);
-  color: var(--base-color);
+nav ul {
+  display: flex;
+  user-select: none;
 }
 
-.right-part {
-  background-color: rgb(185, 184, 184);
-  padding: 0.1rem 1.3rem;
-  border-radius: 2rem;
-}
-
-nav ul a {
-  margin-left: 10px;
-  font-family: "Montserrat", sans-serif;
+nav li {
+  margin-left: 4rem;
   font-size: 1.4rem;
-  /* text-transform: uppercase; */
-  font-weight: bold;
+  color: #fff;
+}
+
+nav li:first-child {
+  margin-left: 0;
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "aboutme selfie" "nextsection nextsection";
+  align-items: center;
+  gap: 10rem 5rem;
+}
+
+.hero-aboutme {
+  grid-area: aboutme;
+}
+
+.hero-aboutme h1 {
+  color: #c281eb;
+  font-size: 4.3rem;
+  font-weight: 500;
+}
+
+.hero-aboutme p {
+  color: #d8b7ed;
+  margin: 3rem 0;
+  max-width: 40rem;
+  min-width: 25rem;
+  height: auto;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+}
+
+.hero-selfie {
+  /* box-shadow: -5px -5px 3rem -0.2rem rgba(255, 255, 255, 0.608); */
+  /* border: 5px solid rgb(109, 25, 111); */
+  border-radius: 3rem;
+  grid-area: selfie;
+  /* width: 100%; */
+  max-width: 350px;
+  /* min-width: 250px; */
+  height: auto;
+  justify-self: right;
+  object-fit: cover;
+}
+
+.hero-links {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.hero-links svg {
+  font-size: 1.7rem;
+  fill: #25242b;
+  padding: 10px;
+  height: 2em;
+  width: 2em;
+  background-color: #9d7cc3;
+  border-radius: 1.5rem;
+}
+
+.next-section-arrow {
+  fill: #9d7cc3;
+  grid-area: nextsection;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 auto;
 }
