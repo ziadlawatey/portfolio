@@ -6,7 +6,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 255px;
+  /* scroll-padding-top: calc(500px - 150px); */
 }
 
 h1,
