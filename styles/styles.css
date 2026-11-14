@@ -86,7 +86,7 @@ nav li:first-child {
   grid-template-columns: 1fr auto;
   grid-template-areas: "aboutme selfie";
   align-items: center;
-  column-gap: 10rem;
+  column-gap: 5rem;
   /* auto margins center the hero in the leftover height of #home */
   margin: auto 0;
 }
