@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+/* 
 @font-face {
   font-family: "Artists Kindle";
   src: url("../assests/fonts/ArtistsKindle-Regular.ttf") format("truetype");
@@ -8,13 +11,14 @@
 @font-face {
   font-family: "Monument Extended";
   src: url("../assests/fonts/monumentextended-regular.otf") format("opentype");
-}
+} */
 
 body {
   background: linear-gradient(90deg, #0f0524 -5%, #2c1752 50%, #482a78 100%);
   font-family: "Archivo", sans-serif;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
@@ -25,6 +29,7 @@ body {
 header {
   /* border-bottom: 1px solid white; */
   position: sticky;
+  /* top: 0; */
   z-index: 100;
   display: flex;
   align-items: center;
@@ -35,7 +40,7 @@ header {
   font-weight: 600;
 }
 
-.logo {
+.header-logo {
   width: 65px;
   height: 65px;
 }
@@ -119,4 +124,37 @@ nav li:first-child {
   width: 2.5em;
   height: 2.5em;
   margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  background-color: #482a78;
+  margin-top: 6rem;
+  padding: 2rem 3rem;
+  border-top: 1px solid rgba(194, 129, 235, 0.25);
+  font-family: "Archivo", sans-serif;
+  justify-content: space-between;
+  color: #c281eb;
+  align-items: center;
+}
+
+.footer-copyrights {
+  color: #c9a7e3;
+  font-weight: 300;
+}
+
+.footer-links {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.footer-links a {
+  color: #d8b7ed;
+}
+
+.footer-links svg {
+  fill: #fff;
+  height: 2em;
+  width: 2em;
 }
