@@ -16,6 +16,3 @@ function updateScroll() {
 
 window.addEventListener("scroll", updateHeader, { passive: true });
 window.addEventListener("scroll", updateScroll, { passive: true });
-
-updateHeader();
-updateScroll();
