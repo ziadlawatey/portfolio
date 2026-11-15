@@ -128,7 +128,7 @@ nav li:first-child {
   padding: 10px;
   box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.404);
   border: 1px solid var(--border-soft);
-  /* background: var(--bg-gradient); */
+  background: var(--purple-700);
   border-radius: 1rem;
   transition: ease-in 1s;
   transform: translateX(100px);
