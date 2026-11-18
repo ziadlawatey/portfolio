@@ -12,7 +12,6 @@
   --icon-bg: #9d7cc3;
   --icon-fg: #25242b;
   --border-soft: rgba(194, 129, 235, 0.25);
-  --cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="%23C281EB" stroke="%23C281EB" stroke-linejoin="round" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>');
   --bg-gradient: linear-gradient(
     90deg,
     var(--purple-900) -5%,
@@ -27,20 +26,6 @@
   --home-h: calc(100vh - 150px - 2 * var(--header-gap));
 }
 
-html {
-  cursor:
-    var(--cursor) 1 1,
-    pointer;
-}
-
-a,
-button,
-[role="button"] {
-  cursor:
-    var(--cursor) 4 3,
-    pointer;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -48,9 +33,6 @@ body {
   background: var(--bg-gradient);
   font-family: "Bricolage Grotesque", sans-serif;
   /* font-family: "Archivo", sans-serif; */
-  cursor:
-    var(--cursor) 1 1,
-    pointer;
 }
 
 main {
@@ -64,7 +46,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   padding: 0 10%;
   height: var(--header-h);
   margin: var(--header-gap) 0;
@@ -132,8 +114,13 @@ nav li:first-child {
   border-radius: 1rem;
   transition: ease-in 1s;
   transform: translateX(100px);
-  fill: rgb(197, 197, 197);
-  transition: transform 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    bottom 0.3s ease-out;
+}
+
+.back-to-top svg {
+  fill: rgb(225, 225, 225);
 }
 
 .back-to-top.show {

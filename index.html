@@ -4,29 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <meta property="og:title" content="Ziad Lawatey's Portfolio" />
-    <meta
+    <meta property="og:title" content="Ziad Lawatey's Portfolio" />
+    <!-- <meta
       property="og:description"
-      content="A brief summary of your webpage content."
-    />
+      content=""
+    /> -->
     <meta property="og:imsage:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
+    <!-- <meta
       property="og:image:alt"
       content="Ziad Lawatey, IT student and Android ROM builder"
-    />
+    /> -->
     <meta
       property="og:url"
       content="https://ziadlawatey-portfolio.vercel.app"
     />
-    <meta property="og:type" content="website" /> -->
+    <meta property="og:type" content="website" />
 
     <!-- All CSS Files Links -->
     <link rel="stylesheet" href="src/styles/default.css" />
     <link rel="stylesheet" href="src/styles/styles.css" />
+    <link rel="stylesheet" href="src/glassy-cursors/glassy-cursors.css" />
 
     <!-- Loading The JS File -->
     <script src="src/index.js" defer></script>
+    <script src="src/glassy-cursors/glassy-cursors.js" defer></script>
 
     <!-- Tab Icon -->
     <link
@@ -39,11 +41,13 @@
   </head>
   <body>
     <header>
-      <img
-        src="assets/icons/white-scribble.png"
-        class="header-logo"
-        alt="logo"
-      />
+      <a href="https://ziadlawatey-portfolio.vercel.app">
+        <img
+          src="assets/icons/white-scribble.png"
+          class="header-logo"
+          alt="logo"
+        />
+      </a>
       <nav>
         <ul>
           <li><a href="#home">HOME</a></li>
@@ -148,7 +152,11 @@
       <section id="work"></section>
       <section id="about"></section>
       <a href="#home" class="back-to-top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+          fill="currentColor"
+        >
           <path
             d="M342.6 73.4C330.1 60.9 309.8 60.9 297.3 73.4L137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7C149.8 291.2 170.1 291.2 182.6 278.7L288 173.3L288 544C288 561.7 302.3 576 320 576C337.7 576 352 561.7 352 544L352 173.3L457.4 278.7C469.9 291.2 490.2 291.2 502.7 278.7C515.2 266.2 515.2 245.9 502.7 233.4L342.7 73.4z"
           />

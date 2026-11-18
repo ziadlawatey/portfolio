@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -34,7 +35,6 @@ picture,
 a {
   padding: 0;
   margin: 0;
-  -webkit-tap-highlight-color: transparent;
 }
 
 ul {
