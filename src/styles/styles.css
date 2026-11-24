@@ -18,12 +18,19 @@
     var(--purple-800) 50%,
     var(--purple-700) 100%
   );
+  --aboutme-gradient: linear-gradient(
+    90deg,
+    #f0abfc 0%,
+    #c084fc 35%,
+    #a78bfa 65%,
+    #8093f1 100%
+  );
 
   --header-h: 100px;
   /* space above and below the header */
   --header-gap: 4.85em;
   /* height of the hero so the first screen is filled */
-  --home-h: calc(100vh - 100px - 2 * var(--header-gap));
+  --home-h: calc(100vh - var(--header-h) - 2 * var(--header-gap));
 }
 
 body {
@@ -67,19 +74,19 @@ header.scrolled {
   height: 65px;
 }
 
-nav ul {
+.header-nav ul {
   display: flex;
   user-select: none;
 }
 
-nav li {
+.header-nav li {
   position: relative;
   margin-left: 4rem;
   font-size: 1.4rem;
   color: #fff;
 }
 
-nav .home {
+.header-nav .home {
   margin-left: 0;
 }
 
@@ -93,17 +100,17 @@ nav .home {
   transition: width 0.4s;
 }
 
-nav:has(.home:hover) .home-line {
+.header-nav:has(.home:hover) .home-line {
   display: block;
   width: 100%;
 }
 
-nav:has(.work:hover) .work-line {
+.header-nav:has(.work:hover) .work-line {
   display: block;
   width: 100%;
 }
 
-nav:has(.about:hover) .about-line {
+.header-nav:has(.about:hover) .about-line {
   display: block;
   width: 100%;
 }
@@ -172,13 +179,7 @@ nav:has(.about:hover) .about-line {
 }
 
 .hero-text h3 {
-  background: linear-gradient(
-    90deg,
-    #f0abfc 0%,
-    #c084fc 35%,
-    #a78bfa 65%,
-    #8093f1 100%
-  );
+  background: var(--aboutme-gradient);
   color: transparent;
   background-clip: text;
   font-size: 1.85rem;
@@ -223,22 +224,33 @@ nav:has(.about:hover) .about-line {
 }
 
 #work {
-  min-height: 100vh;
+  min-height: calc(100vh - 140px);
   scroll-margin-top: var(--header-h);
+  padding: 40px 0 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
 }
 
-.projects {
+.field {
+  border-radius: 1.5rem;
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding: 20px;
   user-select: none;
+  margin: auto 0;
+  background: linear-gradient(
+    90deg,
+    #f0abfc 0%,
+    #c084fc 35%,
+    #a78bfa 65%,
+    #8093f1 100%
+  );
 }
 
-.projects label {
-  background-color: #2c1752;
-}
-
-.projects input[type="radio"] {
+.field input[type="radio"] {
   display: none;
 }
 
@@ -248,6 +260,11 @@ input:checked ~ .elbolbol {
 
 .sections h1 {
   color: black;
+}
+
+.projects-container {
+  background-color: black;
+  border-radius: 1.5rem;
 }
 
 #about {

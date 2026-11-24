@@ -73,7 +73,7 @@
           alt="logo"
         />
       </a>
-      <nav>
+      <nav class="header-nav">
         <ul>
           <li class="home">
             <a href="#home">HOME</a>
@@ -186,21 +186,32 @@
         ></a>
       </section>
       <section id="work">
-        <div class="projects">
-          <label class="frontend-projects" for="front-end" checked>
-            <input type="radio" name="same" id="front-end" />
-            <span class="elbolbol">WEBSITES</span>
-          </label>
-
-          <label class="graphic-projects" for="graphic-design">
-            <input type="radio" name="same" id="graphic-design" />
-            <span class="elbolbol">GRAPHIC DESIGNS</span>
-          </label>
-
-          <label class="android-projects" for="android">
-            <input type="radio" name="same" id="android" />
-            <span class="elbolbol">ADNROID</span>
-          </label>
+        <nav class="projects-nav">
+          <ul class="field">
+            <li>
+              <label class="frontend" for="front-end" checked>
+                <input type="radio" name="same" id="front-end" />
+                <span class="elbolbol">FRONT END</span>
+              </label>
+            </li>
+            <li>
+              <label class="graphic" for="graphic-design">
+                <input type="radio" name="same" id="graphic-design" />
+                <span class="elbolbol">GRAPHIC DESIGNS</span>
+              </label>
+            </li>
+            <li>
+              <label class="android" for="android">
+                <input type="radio" name="same" id="android" />
+                <span class="elbolbol">ADNROID</span>
+              </label>
+            </li>
+          </ul>
+        </nav>
+        <div class="projects-container">
+          <div class="frontend-projects"></div>
+          <div class="graphic-projects"></div>
+          <div class="android-projects"></div>
         </div>
       </section>
       <section id="about"></section>
@@ -218,12 +229,6 @@
     </main>
     <footer>
       <p class="footer-copyrights">© 2026 Ziad Lawatey. All rights reserved.</p>
-
-      <div class="get-in-touch">
-        <form action="mailto:ziadlawaty@gmail.com"></form>
-        <input type="email" name="" id="" required />
-        <input type="submit" value="Submit" />
-      </div>
 
       <ul class="footer-links">
         <li>
