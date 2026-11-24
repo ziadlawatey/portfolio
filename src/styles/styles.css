@@ -23,7 +23,7 @@
   /* space above and below the header */
   --header-gap: 4.85em;
   /* height of the hero so the first screen is filled */
-  --home-h: calc(100vh - 150px - 2 * var(--header-gap));
+  --home-h: calc(100vh - 100px - 2 * var(--header-gap));
 }
 
 body {
@@ -73,13 +73,39 @@ nav ul {
 }
 
 nav li {
+  position: relative;
   margin-left: 4rem;
   font-size: 1.4rem;
   color: #fff;
 }
 
-nav li:first-child {
+nav .home {
   margin-left: 0;
+}
+
+.line {
+  /* display: none; */
+  position: absolute;
+  width: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: var(--icon-bg);
+  transition: width 0.4s;
+}
+
+nav:has(.home:hover) .home-line {
+  display: block;
+  width: 100%;
+}
+
+nav:has(.work:hover) .work-line {
+  display: block;
+  width: 100%;
+}
+
+nav:has(.about:hover) .about-line {
+  display: block;
+  width: 100%;
 }
 
 #home {
@@ -91,7 +117,7 @@ nav li:first-child {
   scroll-margin-top: var(--home-h);
 }
 
-.hero-container {
+.hero {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas: "aboutme selfie";
@@ -116,7 +142,7 @@ nav li:first-child {
   transform: translateX(100px);
   transition:
     transform 0.3s ease-in-out,
-    bottom 0.3s ease-out;
+    bottom 0.2s ease-out;
 }
 
 .back-to-top svg {
@@ -138,14 +164,31 @@ nav li:first-child {
   font-weight: 500;
 }
 
-.hero-aboutme p {
+.hero-text {
   min-width: 25rem;
   max-width: 40rem;
   margin: 3rem 0;
   color: var(--text);
+}
+
+.hero-text h3 {
+  background: linear-gradient(
+    90deg,
+    #f0abfc 0%,
+    #c084fc 35%,
+    #a78bfa 65%,
+    #8093f1 100%
+  );
+  color: transparent;
+  background-clip: text;
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  line-height: 2.5rem;
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 2.5rem;
 }
 
 .hero-links {
@@ -175,21 +218,40 @@ nav li:first-child {
 .next-section-arrow {
   width: 2.5em;
   height: 2.5em;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   fill: var(--icon-bg);
 }
 
 #work {
   min-height: 100vh;
+  scroll-margin-top: var(--header-h);
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  user-select: none;
+}
+
+.projects label {
+  background-color: #2c1752;
+}
+
+.projects input[type="radio"] {
+  display: none;
+}
+
+input:checked ~ .elbolbol {
+  color: white;
+}
+
+.sections h1 {
+  color: black;
 }
 
 #about {
   min-height: calc(100vh - 6.25rem);
-}
-
-#work {
-  /* keeps the section from hiding under the sticky header */
-  scroll-margin-top: var(--header-h);
 }
 
 footer {
