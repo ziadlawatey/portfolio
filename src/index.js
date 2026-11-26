@@ -21,7 +21,7 @@ function updateScroll() {
   const overlap = window.innerHeight - footerRect.top;
 
   backToTop.style.bottom =
-    overlap > buttonHeight + bottomGap ? `${overlap + bottomGap}px` : "30px";
+    backToTop.style.bottom = `${Math.max(30, overlap + bottomGap)}px`;
 }
 
 window.addEventListener("scroll", updateHeader, { passive: true });

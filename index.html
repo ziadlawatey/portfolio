@@ -65,7 +65,7 @@
     <title>Ziad Lawatey | Portfolio</title>
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <a href="#home">
         <img
           src="assets/icons/white-scribble.png"
@@ -186,33 +186,50 @@
         ></a>
       </section>
       <section id="work">
-        <nav class="projects-nav">
-          <ul class="field">
-            <li>
-              <label class="frontend" for="front-end" checked>
-                <input type="radio" name="same" id="front-end" />
-                <span class="elbolbol">FRONT END</span>
-              </label>
-            </li>
-            <li>
-              <label class="graphic" for="graphic-design">
-                <input type="radio" name="same" id="graphic-design" />
-                <span class="elbolbol">GRAPHIC DESIGNS</span>
-              </label>
-            </li>
-            <li>
-              <label class="android" for="android">
-                <input type="radio" name="same" id="android" />
-                <span class="elbolbol">ADNROID</span>
-              </label>
-            </li>
-          </ul>
-        </nav>
+        <header class="work-header">
+          <nav class="projects-nav">
+            <ul class="fields">
+              <li>
+                <input type="radio" name="field" id="f-web" checked />
+                <label for="f-web">Web</label>
+              </li>
+              <li>
+                <input type="radio" name="field" id="f-android" />
+                <label for="f-android">Android</label>
+              </li>
+              <li>
+                <input type="radio" name="field" id="f-design" />
+                <label for="f-design">Design</label>
+              </li>
+              <div class="selected-background"></div>
+            </ul>
+          </nav>
+        </header>
         <div class="projects-container">
-          <div class="frontend-projects"></div>
-          <div class="graphic-projects"></div>
-          <div class="android-projects"></div>
+          <div class="frontend-projects projects">
+            <div class="project-card"></div>
+          </div>
+          <div class="android-projects projects">
+            <div class="project-card a7-twrp">
+              <div class="card-preview">
+                <img
+                  src="assets/projecsts previews/a7-twrp.jpg"
+                  alt="A7 TWRP"
+                />
+              </div>
+              <div class="card-description">
+                <h3 class="project-title">Tablet A7 TWRP</h3>
+                <p class="project-description">
+                  TWRP device tree for the Samsung Galaxy Tab A7 10.4
+                  (SM-T509/gta4lve), including disabled vbmeta and encryption
+                  fix.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="graphic-projects projects"></div>
         </div>
+        <!-- </div> -->
       </section>
       <section id="about"></section>
       <a href="#home" class="back-to-top">
